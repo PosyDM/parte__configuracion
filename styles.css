@@ -1,0 +1,201 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Jockey+One&display=swap');
+
+    body {
+        font-family: 'Inter', sans-serif;
+        background-image: url('pasto.png'); /* Fondo corregido */
+        background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* No repetir la imagen */
+        margin: 0;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* Barra lateral */
+    .sidebar {
+        width: 70px;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #4a773c;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        gap: 33px; /* Espaciado  entre los íconos */
+    }
+
+    .sidebar a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90px;
+    }
+
+    .sidebar a img {
+        width: 40px; /* Tamaño adecuado  */
+        height: auto;
+        transition: transform 0.2s;
+    }
+
+    .sidebar a:hover img {
+        transform: scale(1.2);
+    }
+
+    /* Botón de regreso y logo */
+    .back-button {
+        position: fixed;
+        top: 10px;
+        left: 80px; /* Se mantiene aquí */
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+
+    .logo-de-proyecto {
+        position: fixed;
+        top: 16px; /* Ligeramente ajustado para mejor alineación */
+        left: 130px; /* Espaciado adecuado para evitar superposición */
+        width: 35px; /* Reducido pero aún visible */
+        height: 35px;
+        cursor: pointer;
+    }
+
+    .back-button img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Contenedor principal */
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 100px;
+        width: 100%;
+        max-width: 900px;
+        height: auto;
+        padding: 20px;
+    }
+
+    /* Título */
+    .title {
+        font-size: 32px;
+        font-family: 'Libre Baskerville', serif;
+        color: #5a7750;
+        background: #d3d3d3;
+        padding: 15px 200px;
+        border-radius:18px;
+        text-align: center;
+        font-weight: bold;
+        border: 2px solid #808080;
+        letter-spacing: 1px;
+        width: fit-content;
+    }
+
+    /* Menú de opciones */
+    .menu {
+        background: #e0e0e0;
+        padding: 20px;
+        border-radius: 20px;
+        display: grid;
+        gap: 10px;
+        width: 90%;
+        max-width: 800px;
+        border: 1px solid #1b1b1b;
+    }
+
+    .menu-item {
+        background: #bdbdbd;
+        color: #56724d;
+        font-size: 20px;
+        padding: 12px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        text-align: left;
+        font-weight: bold;
+        border: 1px solid #272727;
+        box-shadow: inset 1px 2px 3px rgba(231, 230, 230, 0.2);
+    }
+
+    .menu-item img {
+        width: 45px;
+        height: 41px;
+    }
+
+    .menu-item:hover {
+        background: #888;
+    }
+
+    /* Panel emergente */
+    .panel {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 500px;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .panel .close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    /* Responsividad */
+    @media screen and (max-width: 768px) {
+        .sidebar {
+            width: 50px;
+        }
+
+        .sidebar a {
+            font-size: 18px;
+        }
+
+        .back-button {
+            left: 60px;
+        }
+
+        .title {
+            font-size: 20px;
+            padding: 10px 30px;
+        }
+
+        .menu {
+            width: 90%;
+        }
+
+        .menu-item {
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .menu-item img {
+            width: 35px;
+            height: 31px;
+        }
+
+        .panel {
+            width: 90%;
+        }
+    }
